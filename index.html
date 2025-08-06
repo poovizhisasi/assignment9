@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Phonebook Application</title>
+<!-- Bootstrap CSS -->
+<link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body><div class="container mt-5 ">
+<h2 class="text-center mb-4">PHONE BOOK </h2>
+<header class="header">
+
+<form id="contactForm" class="mb-4" autocomplete="off">
+<div class="form-row mt-3">
+<div class="col-md-5 mb-2">
+<input
+type="text"
+class="form-control"
+id="nameInput"
+placeholder="eg: poovi"
+required
+/>
+</div>
+<div class="col-md-5 mb-2">
+<input
+type="tel"
+class="form-control"
+id="phoneInput"
+placeholder="eg: 9876543210"
+pattern="^(?:\+91[\-\s]?|91[\-\s]?|0)?[6-9][0-9]{9}$"
+title="Enter a valid Indian phone number (10 digits, starting with 6-9, with or without +91/0)"
+required
+/>
+</div>
+<div class="col-md-2 mb-2">
+<button type="submit" class="btn btn-info btn-block"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+</svg></button>
+</div>
+</div>
+</form>
+</header>
+<!-- Contacts list -->
+<ul class="list-group" id="contactList">
+<!-- Contacts will populate here -->
+</ul>
+
+<!-- Error message -->
+<div id="errorMessage" class="text-danger mt-3" role="alert" style="display:none"></div>
+</div>
+</div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
